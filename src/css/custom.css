@@ -1,0 +1,122 @@
+/* stylelint-disable docusaurus/copyright-header */
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: rgba(28, 162, 128, 1);
+  --ifm-color-primary-dark: rgb(33, 175, 144);
+  --ifm-color-primary-darker: rgb(31, 165, 136);
+  --ifm-color-primary-darkest: rgb(26, 136, 112);
+  --ifm-color-primary-light: rgb(70, 203, 174);
+  --ifm-color-primary-lighter: rgb(102, 212, 189);
+  --ifm-color-primary-lightest: rgb(146, 224, 208);
+  --ifm-code-font-size: 95%;
+
+  /* --ifm-footer-background-color: #20232a !important; */
+}
+
+
+.docusaurus-highlight-code-line {
+  background-color: rgb(72, 77, 91);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+.hero__logo{
+  max-width: 200px;
+}
+
+/* greek */
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  /* font-display: swap; */
+  src: local("Ubuntu Regular"), local("Ubuntu-Regular"),
+    url(/static/fonts/ubantu.woff2)
+      format("woff2");
+}
+
+body{
+  font-size: 14px;
+}
+
+h1{
+  font-size: 34px !important;
+}
+h2{
+  font-size: 24px;
+}
+h3{
+  font-size: 20px;
+}
+h4{
+  font-size: 18px;
+}
+
+.admonition-important{
+  background-color: #409EFF !important;
+  border-color:  #409EFF !important;
+}
+
+.markdown > pre, .markdown > ul, .markdown > p{
+  margin-bottom: 5px !important;
+}
+
+.navbar{
+  font-size: 16px;
+}
+
+/* Github Brand */
+.navbar__item.navbar__link[href*=github]:before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url(/img/brand-github.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navbar__item.navbar__link[href*=github] {
+  display: flex;
+  font-size: 0;
+  padding: 0 12px;
+}
+
+/* Banner */
+.btn-1,.btn-2{
+  color: #fff !important;
+  font-weight: 500;
+  font-size: 1.125rem;
+  border-radius: 4px;
+}
+.btn-1:hover{
+  color: #2b3137 !important;
+  background: #fff;
+}
+.btn-2{
+  background: rgba(28, 162, 128, 1);
+  border-color: rgba(28, 162, 128, 1);
+}
+.btn-2:hover{
+  background: rgb(29, 212, 166);
+  border-color: rgb(29, 212, 166);
+}
+.hero.hero--primary {
+  --ifm-hero-background-color: #2b3137;
+}
+/* Dark Model */
+.react-toggle{
+  display: none !important;
+}
+
+/* Footer */
+.footer{
+  background-color: #20232a !important;
+  padding: 1.25rem 0 !important;
+}
