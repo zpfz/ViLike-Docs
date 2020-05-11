@@ -16,9 +16,8 @@ module.exports = {
   ],
   themeConfig: {
     algolia: {
-      apiKey: 'e4298622e1661eb1793fe74c05e9b497',
-      indexName: 'vilike-search',
-      appId: 'B2N7IXC902', // Optional, if you run the DocSearch crawler on your own
+      apiKey: '43e1b300067d05f01d37458eba8da9dd',
+      indexName: 'vilikejs'
     },
     navbar: {
       title: 'ViLike JS',
