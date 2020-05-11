@@ -7,6 +7,13 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'SEEYOZ', // Usually your GitHub org/user name.
   projectName: 'ViLikeJS', // Usually your repo name.
+  scripts: [
+    {
+      src:
+        './js/meta.js',
+      async: true,
+    },
+  ],
   themeConfig: {
     algolia: {
       apiKey: 'e4298622e1661eb1793fe74c05e9b497',

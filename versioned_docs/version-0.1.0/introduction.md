@@ -8,6 +8,10 @@ title: 介绍
 
 ![Build](https://img.shields.io/badge/build-passing-brightgreen?style=flat-square) ![npm](https://img.shields.io/npm/dt/vilike?style=flat-square&color=red) ![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/zpfz/vilikejs?style=flat-square&color=orange)  ![Version](https://img.shields.io/badge/license-MIT-brightgreen?style=flat-square&color=blue) <iframe src="https://ghbtns.com/github-btn.html?user=zpfz&repo=vilikejs&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20"></iframe>
 
+:::note QQ交流群
+为了能及时解决 ViLike JS 所带来的问题，我们建立了QQ群方便交流，群号：[867711329](https://shang.qq.com/wpa/qunwpa?idkey=59c63c245565531d41b91b9acf43b6ca579efb66bc7dd71d2e64804256c507a3)。
+:::
+
 ## 特性 
 
 - 简单功能简单实现，封装十几行代码实现超轻量的JS插件。
