@@ -3,24 +3,41 @@ id: getting-started
 title: 开始使用
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
 ## 引用库
 在使用之前，你需要给你的项目引入 [Bmob](https://github.com/bmob/hydrogen-js-sdk/tree/master/dist) 和 [ViLikeJS](https://github.com/zpfz/ViLikeJS/tree/master/dist) ：
 
 ```js
 <script src="https://cdn.jsdelivr.net/gh/bmob/hydrogen-js-sdk@2.2.3/dist/Bmob-2.2.3.min.js"></script>
-<script src="https://unpkg.com/vilike@0.1.0-beta/index.js"></script>
+<script src="https://unpkg.com/browse/vilike@0.1.0-beta.3/dist/ViLike-0.1.0-beta.3.min.js"></script>
 ```
+
 当然，你也可以以包的形式进行安装：
+<Tabs
+  defaultValue="npm"
+  values={[
+    { label: 'npm', value: 'npm', },
+    { label: 'yarn', value: 'yarn', },
+  ]
+}>
+<TabItem value="npm">
 
 ```sh
 npm i vilike
 ```
 
-或者
+</TabItem>
+<TabItem value="yarn">
 
 ```sh
 yarn add vilike
 ```
+
+</TabItem>
+</Tabs>  
 
 ## 初始化
 引用完毕后，在你项目入口文件进行以下配置：
@@ -53,11 +70,11 @@ ViLike.init();
 
 ## APIs
 
-### ViLike.get(key,(visit,like,islike)=>{})
+### ViLike.get
 
 用于获取访问量、点赞数以及点赞状态，例如：
 
-```js
+```js title="ViLike.get(key,(visit,like,islike)=>{})"
 ViLike.get('1192a75ccf48e109',(visit,like,islike)=>{
   // 依次显示 访问量、点赞数、点赞状态
   console.log(visit,like,islike)
@@ -72,10 +89,10 @@ key 是从 Bmob 后端云写入和读取的唯一标识，获取或操作访问�
 考虑一般情况下用户不会经常清理浏览器数据，所以插件采用 Localstorage 技术来判别访问量计数和点赞的状态，这样可以使访问量计数和点赞的状态保持较长的周期。当用户一旦清空浏览器数据，访问量计数会继续统计，点赞状态也会恢复默认状态。
 :::
 
-### ViLike.like(key,(like)=>{})
+### ViLike.like
 
 用于实现点赞计数功能，例如：
-```js
+```js title="ViLike.like(key,(like)=>{})"
 ViLike.like('1192a75ccf48e109',(like)=>{
   // 显示点赞后最新的点赞数
   console.log(like)

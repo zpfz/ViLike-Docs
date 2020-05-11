@@ -1,0 +1,40 @@
+{
+  "version-0.1.0/docs": [
+    {
+      "type": "category",
+      "label": "ViLikeJS",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-0.1.0/introduction"
+        },
+        {
+          "type": "doc",
+          "id": "version-0.1.0/changelog"
+        },
+        {
+          "type": "doc",
+          "id": "version-0.1.0/using-cdn"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "快速上手",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-0.1.0/prepare-to-work"
+        },
+        {
+          "type": "doc",
+          "id": "version-0.1.0/getting-started"
+        },
+        {
+          "type": "doc",
+          "id": "version-0.1.0/vuepress"
+        }
+      ]
+    }
+  ]
+}

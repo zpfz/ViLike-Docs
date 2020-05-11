@@ -9,7 +9,7 @@ import styles from './styles.module.css';
 const features = [
   {
     title: <>更轻量</>,
-    imageUrl: 'img/undraw_docusaurus_mountain.svg',
+    imageUrl: 'img/block_1.svg',
     description: (
       <>
         简单功能简单实现，封装十几行代码实现超轻量的JS插件。
@@ -18,7 +18,7 @@ const features = [
   },
   {
     title: <>更安全</>,
-    imageUrl: 'img/undraw_docusaurus_tree.svg',
+    imageUrl: 'img/block_2.svg',
     description: (
       <>
         无需在个人服务器上搭建后端系统，数据访问更加安全。
@@ -27,7 +27,7 @@ const features = [
   },
   {
     title: <>更方便</>,
-    imageUrl: 'img/undraw_docusaurus_react.svg',
+    imageUrl: 'img/block_3.svg',
     description: (
       <>
         借助Bmob创建后端平台，创建、管理更加方便快捷。

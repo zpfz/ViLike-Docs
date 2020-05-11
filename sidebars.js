@@ -6,9 +6,9 @@ module.exports = {
       'using-cdn'
     ],
     快速上手: [
-      'ready-to-work',
+      'prepare-to-work',
       'getting-started',
       'vuepress',
     ]
-  },
+  }
 };

@@ -1,3 +1,4 @@
+const versions = require('./versions.json');
 module.exports = {
   title: 'ViLike JS',
   tagline: '一款基于Bmob后端云轻量级的访问量&点赞插件',
@@ -7,6 +8,11 @@ module.exports = {
   organizationName: 'SEEYOZ', // Usually your GitHub org/user name.
   projectName: 'ViLikeJS', // Usually your repo name.
   themeConfig: {
+    algolia: {
+      apiKey: 'e4298622e1661eb1793fe74c05e9b497',
+      indexName: 'vilike-search',
+      appId: 'B2N7IXC902', // Optional, if you run the DocSearch crawler on your own
+    },
     navbar: {
       title: 'ViLike JS',
       logo: {
@@ -16,10 +22,25 @@ module.exports = {
       },
       links: [
         {
-          to: 'docs/introduction',
-          activeBasePath: 'docs',
           label: '文档',
+          to: 'docs/introduction', // "fake" link
           position: 'left',
+          activeBasePath: 'version',
+          items: [
+            {
+              label: versions[0],
+              to: 'docs/introduction',
+            },
+            ...versions.slice(1).map((version) => ({
+              label: version,
+              to: `docs/${version}/introduction`,
+            })),
+          ],
+        },
+        {
+          to: 'docs/en/translation',
+          label: `English`,
+          position: 'right',
         },
         {
           href: 'https://github.com/zpfz/ViLikeJS',
@@ -82,6 +103,7 @@ module.exports = {
       // },
       copyright: `MIT Licensed | Copyright © ${new Date().getFullYear()} Feng Left-Handed.`,
     },
+    sidebarCollapsible: false
   },
   presets: [
     [
@@ -91,7 +113,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/zpfz/ViLikeJS-Docs/edit/master/docs/',
+            'https://github.com/zpfz/ViLikeJS-Docs/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

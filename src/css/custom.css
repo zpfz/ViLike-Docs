@@ -14,9 +14,17 @@
   --ifm-color-primary-light: rgb(70, 203, 174);
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest: rgb(146, 224, 208);
-  --ifm-code-font-size: 95%;
-
-  /* --ifm-footer-background-color: #20232a !important; */
+  /* --ifm-code-font-size: 100%; */
+  --ifm-menu-color: #315947;
+  --ifm-menu-color-background-active: rgba(28, 162, 128, 0.1);
+  --ifm-menu-color-background-hover: rgba(28, 162, 128, 0.1);
+  --ifm-global-radius: 3px;
+  --ifm-blockquote-font-size: 15px;
+  --ifm-color-emphasis-200: #494f69;
+  --ifm-navbar-search-input-background-color:#f1f1f1;
+  --ifm-hr-border-color: #b5b5b5;
+  --ifm-hr-border-width: 1px;
+  --ifm-hr-margin-vertical: 5px;
 }
 
 
@@ -39,14 +47,17 @@
   font-weight: 400;
   /* font-display: swap; */
   src: local("Ubuntu Regular"), local("Ubuntu-Regular"),
-    url(/static/fonts/ubantu.woff2)
+    url(https://fonts.gstatic.com/s/ubuntu/v14/4iCs6KVjbNBYlgoKfw72.woff2)
       format("woff2");
 }
 
 body{
-  font-size: 14px;
+  font-size: 15px;
+  font-family: Ubuntu, -apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol !important;
 }
-
+h1,h2,h3,h4{
+  font-weight: 500;
+}
 h1{
   font-size: 30px !important;
 }
@@ -54,26 +65,85 @@ h2{
   font-size: 24px;
 }
 h3{
-  font-size: 20px;
+  font-size: 18px;
 }
 h4{
-  font-size: 18px;
+  font-size: 16px;
+}
+
+hr {
+  height: 1px;
+  border:none;
+  border-bottom:1px dashed var(--ifm-hr-border-color) ;
+  margin: var(--ifm-hr-margin-vertical) 0 !important;
+}
+
+.markdown > h2{
+  margin-top: 2.4375rem;
+}
+/* Code */
+.prism-code::-webkit-scrollbar {
+  height: 6px;
+}
+.prism-code::-webkit-scrollbar-thumb {
+  background-color: #c3c3c3;
+}
+
+.prism-code::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 .prism-code:focus{
   outline: none;
-  border-radius: 4px;
 }
+
+/* Tab */
+.tab-item{
+  outline: none;
+  transition: background-color .25s ease-in-out, color .25s ease-in-out;
+}
+
+/* Tip */
 
 .admonition-important{
   background-color: #409EFF !important;
   border-color:  #409EFF !important;
 }
 
-.markdown > pre, .markdown > ul, .markdown > p{
-  margin-bottom: 5px !important;
+.pic-center{
+  display: block;
+  margin: 0 auto;
 }
 
-.navbar{
+.menu__link[href="#!"]{
+  user-select: none;
+  pointer-events: none;
+}
+.menu__link{
+  line-height: 1.6875rem !important;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
+}
+
+/* Badge */
+
+.badge{
+  margin-bottom: .625rem;
+  font-weight: 500;
+  font-size: 85%;
+}
+.badge--secondary{
+  --ifm-badge-background-color: var(--ifm-color-primary) !important;
+  color: #fff !important;
+}
+
+/* Dropdown */
+.dropdown__menu{
+  border-radius: 6px !important;
+}
+.dropdown__link--active{
+  color: var(--ifm-color-primary) !important;
+}
+
+.navbar__item{
   font-size: 16px;
 }
 
@@ -91,6 +161,10 @@ h4{
   display: flex;
   font-size: 0;
   padding: 0 12px;
+  transition: opacity .2s ease-in-out;
+}
+.navbar__item.navbar__link[href*=github]:hover {
+  opacity: .5;
 }
 
 .banner-block{
