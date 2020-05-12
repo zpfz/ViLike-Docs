@@ -102,6 +102,16 @@ hr {
   transition: background-color .25s ease-in-out, color .25s ease-in-out;
 }
 
+.tabItem_node_modules-\@docusaurus-theme-classic-src-theme-Tabs-:focus{
+  background-color: transparent !important;
+}
+
+/* Bubble */
+.crisp-client #crisp-chatbox>div>a>span:last-child {
+  width: 50px!important;
+  height: 50px!important;
+}
+
 /* Tip */
 
 .admonition-important{

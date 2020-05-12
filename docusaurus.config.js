@@ -10,7 +10,7 @@ module.exports = {
   scripts: [
     {
       src:
-        './js/meta.js',
+        './js/extra.js',
       async: true,
     },
   ],
