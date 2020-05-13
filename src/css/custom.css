@@ -106,12 +106,6 @@ hr {
   background-color: transparent !important;
 }
 
-/* Bubble */
-.crisp-client #crisp-chatbox>div>a>span:last-child {
-  width: 50px!important;
-  height: 50px!important;
-}
-
 /* Tip */
 
 .admonition-important{
