@@ -1,1 +1,1 @@
-window.$crisp=[];window.CRISP_WEBSITE_ID="3cf09a97-519b-42ed-af59-145466102f2e";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();var oMeta = document.createElement('meta');oMeta.content = 'never';oMeta.name = 'referrer';document.getElementsByTagName('head')[0].appendChild(oMeta);
+var oMeta = document.createElement('meta');oMeta.content = 'never';oMeta.name = 'referrer';document.getElementsByTagName('head')[0].appendChild(oMeta);
