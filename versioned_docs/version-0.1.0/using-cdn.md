@@ -4,7 +4,7 @@ title: 使用 CDN
 ---
 
 :::important 温馨提示
-使用 ViLikeJS 之前，请先自行引入 Bmob 库。
+使用 ViLike.js 之前，请先自行引入 Bmob 库。
 :::
 
 ## unpkg
@@ -25,7 +25,7 @@ title: 使用 CDN
 <script src="https://cdn.jsdelivr.net/npm/vilike"></script>
 ```
 ### 使用 github 源
-你可以访问 [jsdelivr-github](https://cdn.jsdelivr.net/gh/zpfz/vilikejs@master/dist/) 来选择你要使用的版本。
+你可以访问 [jsdelivr-github](https://cdn.jsdelivr.net/gh/zpfz/vilike.js/dist/) 来选择你要使用的版本。
 
 ```js
 <script src="https://cdn.jsdelivr.net/gh/zpfz/vilikejs@master/dist/ViLike-0.1.0-beta.3.min.js"></script>
