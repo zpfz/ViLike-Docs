@@ -1,12 +1,12 @@
 const versions = require('./versions.json');
 module.exports = {
-  title: 'ViLike JS',
+  title: 'ViLike.js',
   tagline: '一款基于Bmob后端云轻量级的访问量&点赞插件',
   url: 'https://vilike.seeyoz.cn/',
   baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'SEEYOZ', // Usually your GitHub org/user name.
-  projectName: 'ViLikeJS', // Usually your repo name.
+  projectName: 'ViLike.js', // Usually your repo name.
   scripts: [
     {
       src:
@@ -49,7 +49,7 @@ module.exports = {
           position: 'right',
         },
         {
-          href: 'https://github.com/zpfz/ViLikeJS',
+          href: 'https://github.com/zpfz/ViLike.js',
           label: 'GitHub',
           position: 'right',
         },
