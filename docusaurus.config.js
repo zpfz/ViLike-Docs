@@ -20,9 +20,9 @@ module.exports = {
       indexName: 'vilikejs'
     },
     navbar: {
-      title: 'ViLike JS',
+      title: 'ViLike.js',
       logo: {
-        alt: 'ViLike JS',
+        alt: 'ViLike.js',
         src: 'img/logo.png',
         srcDark: '/img/logo-white.png',
       },
