@@ -8,13 +8,13 @@ import TabItem from '@theme/TabItem';
 
 
 ## 安装
-先在 `.vuepress/config.js` 的 `head` 字段配置以下代码：
+<!-- 先在 `.vuepress/config.js` 的 `head` 字段配置以下代码：
 ```js title=".vuepress/config.js"
 head: [
   ['script', {type: 'text/javascript', src: 'https://cdn.jsdelivr.net/gh/bmob/hydrogen-js-sdk@2.2.3/dist/Bmob-2.2.3.min.js'}]
 ]
-```
-然后给项目安装 ViLikeJS 库：
+``` -->
+给项目安装 Bmob 库和 ViLikeJS 库：
 <Tabs
   defaultValue="npm"
   values={[
@@ -25,14 +25,14 @@ head: [
 <TabItem value="npm">
 
 ```sh
-npm i vilike
+npm i vilike hydrogen-js-sdk@^2.2.3
 ```
 
 </TabItem>
 <TabItem value="yarn">
 
 ```sh
-yarn add vilike
+yarn add vilike hydrogen-js-sdk@^2.2.3
 ```
 
 </TabItem>
@@ -41,7 +41,8 @@ yarn add vilike
 
 ## 配置
 在 `enhanceApp.js` 下配置以下代码：
-```js {1,9,13-20,22}
+```js {1-2,9,13-20,22}
+import Bmob from 'hydrogen-js-sdk/dist/Bmob-2.2.3.min.js'
 import ViLike from 'vilike'
 
 export default ({
@@ -50,6 +51,7 @@ export default ({
   router,
   siteData,
 }) => {
+  // DON'T Vue.use(Bmob)
   Vue.use(ViLike)
 }
 
