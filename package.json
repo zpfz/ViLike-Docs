@@ -15,5 +15,8 @@
     "less-loader": "^5.0.0",
     "vuepress": "^1.8.2",
     "vuepress-plugin-sitemap": "^2.3.1"
+  },
+  "dependencies": {
+    "vilike": "^0.2.0"
   }
 }

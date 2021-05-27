@@ -24,7 +24,7 @@
         <iframe src="https://ghbtns.com/github-btn.html?user=zpfz&repo=Vilike.js&type=star&count=true" frameborder="0" scrolling="0" width="96" height="20" title="GitHub"></iframe>
       </div>
       <div>
-        <div class="global-btn btn-1" style="margin-right:13px;" @click="demoOnline()">{{ languagePack.currentLang == 'en_US' ? languagePack.en_US.demo : languagePack.zh_CN.demo }}</div>
+        <div class="global-btn btn-1" style="margin-right:13px;" @click="Likes()">{{ languagePack.currentLang == 'en_US' ? `${likes} ${languagePack.en_US.likes}` : `${likes} ${languagePack.zh_CN.likes}` }}</div>
         <a href="#main">
           <div class="global-btn btn-2">
             {{ languagePack.currentLang == 'en_US' ? languagePack.en_US.start : languagePack.zh_CN.start }}
@@ -45,28 +45,37 @@ export default {
           changelog: '更新日志',
           languages: 'English',
           description: '一款轻量级访问量&点赞插件',
-          demo: '点赞',
-          start: '快速上手'
+          likes: '喜欢',
+          start: '快速上手',
+          tip: '你已经点过赞啦！'
         },
         en_US:{
           changelog: 'Changelog',
           languages: '简体中文',
           description: 'A lightweight counts of visit and like plugin.',
-          demo: 'Awesome',
-          start: 'Quick Start'
+          likes: 'Likes',
+          start: 'Quick Start',
+          tip: 'You\'ve already clicked on it !'
         },
         currentLang: 'en_US',
         currentPath: '#'
       },
+      likes: 'Loading...',
     }
   },
   created(){
     this.languagePack.currentPath = this.$page.path == '/' ? '/zh_CN.html':'/';
     this.languagePack.currentLang = this.$page.path == '/' ? 'en_US' : 'zh_CN';
+    Vilike.info('zpfz','vilike').then((result) => {
+      this.likes = result.value;
+    });
   },
   methods:{
-    demoOnline(){    
-     
+    Likes(){    
+      Vilike.exec('zpfz','vilike',1).then((result) => {
+        this.likes = result.value;
+        if (result.isHit) alert(this.languagePack.currentLang == 'en_US' ? this.languagePack.en_US.tip : this.languagePack.zh_CN.tip)
+      });
     }
   }
 };
