@@ -1,0 +1,97 @@
+.custom-block {
+  .custom-block-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    margin-top: 1rem;
+    color: rgba(0, 0, 0, 0.65);
+  }
+
+  &.tip, &.warning, &.danger, &.success {
+    padding: 0.1rem 1.5rem;
+    border-left-width: 0.25rem;
+    border-left-style: solid;
+    margin: 1rem 0;
+  }
+
+  &.tip {
+    background-color: #e3f2fd;
+    border-color: #64b5f6;
+
+    .custom-block-title {
+      color: #64b5f6;
+    }
+
+    a {
+      color: @textColor;
+    }
+  }
+
+  &.warning {
+    background-color: #fff3e0;
+    border-color: #ffb74d;
+
+    .custom-block-title {
+      color: #ffb74d;
+    }
+
+    a {
+      color: @textColor;
+    }
+  }
+
+  &.danger {
+    background-color: #fff1f0;
+    border-color: #ff4d4d;
+
+    .custom-block-title {
+      color: #ff4d4d;
+    }
+
+    a {
+      color: @textColor;
+    }
+  }
+
+  &.success {
+    background-color: #edf8f5;
+    border-color: #1ca280;
+
+    .custom-block-title {
+      color: #1ca280;
+    }
+
+    a {
+      color: @textColor;
+    }
+    p{
+      color: #288870;
+    }
+  }
+
+
+  &.details {
+    display: block;
+    position: relative;
+    border-radius: 2px;
+    margin: 1.6em 0;
+    padding: 1.6em;
+    background-color: #eee;
+
+    h4 {
+      margin-top: 0;
+    }
+
+    figure, p {
+      &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+
+    summary {
+      outline: none;
+      cursor: pointer;
+    }
+  }
+}
