@@ -159,6 +159,12 @@ Vilike.info('github.zpfz','vilike').then((result) => {
 
 ## Changelog
 ---
+### 0.2.2
+- 🌟 Change XMLHttpRequest to cross-fetch.
+
+### 0.2.1
+  - 📢 Version bump only for package vilike
+
 ### 0.2.0
   - 🌟 Optimize API service, you can use it without configuring the back-end platform.
   - 🌟 Refactor methods and attributes to make it easier to use.

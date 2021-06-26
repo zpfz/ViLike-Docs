@@ -160,6 +160,12 @@ Vilike.info('github.zpfz','vilike').then((result) => {
 
 ## 更新日志
 ---
+### 0.2.2
+- 🌟 改变 XMLHttpRequest 为 cross-fetch，兼容性更好
+
+### 0.2.1
+  - 📢 仅更新版本号，没有太大改动
+
 ### 0.2.0
   - 🌟 优化 API 服务，无需配置后端平台即可使用
   - 🌟 重构方法、属性，使用更简单
