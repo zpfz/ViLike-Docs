@@ -13,7 +13,7 @@ module.exports = {
   },
   plugins: {
     'sitemap': {
-      hostname: 'https://vilike.vercel.app'
+      hostname: 'https://vilike.pages.dev'
     },
   },
   themeConfig: {

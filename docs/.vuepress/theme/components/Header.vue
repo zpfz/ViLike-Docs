@@ -63,7 +63,7 @@ export default {
       likes: 'Loading...',
     }
   },
-  created(){
+  mounted(){
     this.languagePack.currentPath = this.$page.path == '/' ? '/zh_CN.html':'/';
     this.languagePack.currentLang = this.$page.path == '/' ? 'en_US' : 'zh_CN';
     Vilike.info('zpfz','vilike').then((result) => {
